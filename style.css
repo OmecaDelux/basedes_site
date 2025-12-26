@@ -1,0 +1,261 @@
+:root {
+    --bg-dark: #0a0e1a;
+    --text-white: #ffffff;
+    --text-muted: #d1d5db;
+    --purple: #9b51e0;
+    --gradient-plans: linear-gradient(90deg, #4caf50 0%, #00bcd4 100%);
+    --font-main: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.section {
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.max-width-md {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.section-hero {
+    min-height: 100vh;
+    padding-top: 40px;
+}
+
+.hero-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+
+.logo-icon-small {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.btn-plans {
+    display: inline-block;
+    padding: 16px 40px;
+    background: var(--gradient-plans);
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.btn-plans:hover {
+    transform: scale(1.05);
+}
+
+.img-reference {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rounded {
+    border-radius: 40px;
+}
+
+/* Trust Section */
+.trust-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.trust-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: #b0e0e6;
+}
+
+/* Companions Section */
+.title-purple {
+    font-size: 3.5rem;
+    color: var(--purple);
+    margin-bottom: 40px;
+}
+
+.centered-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.adventure-icon {
+    width: 120px;
+}
+
+/* About Section */
+.about-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.text-purple {
+    color: var(--purple);
+}
+
+.about-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* How Section */
+.how-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Footer Section */
+.section-footer {
+    padding-bottom: 120px;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #1a0b3a 100%);
+}
+
+.footer-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: start;
+}
+
+.footer-logo {
+    max-width: 250px;
+}
+
+.footer-contact h3 {
+    font-size: 2.5rem;
+    color: #b0e0e6;
+    margin-bottom: 20px;
+}
+
+.email {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Animation Classes */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+
+    .hero-content, .trust-layout, .how-layout, .footer-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .header-logo, .social-icons {
+        justify-content: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+    
+    .trust-text h2, .title-purple, .about-title {
+        font-size: 2.2rem;
+    }
+
+    .img-reference {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
